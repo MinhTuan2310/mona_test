@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(../fonts/SF-Pro-Display-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(../fonts/SF-Pro-Display-Semibold.otf);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(../fonts/SF-Pro-Display-Light.otf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(../fonts/SF-Pro-Display-Bold.otf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(../fonts/SF-Pro-Display-BlackItalic.otf);
+  font-style: normal;
+  font-weight: 700;
+}
+/* structures */
+:root {
+  --primary-color: #F15B40;
+  --secondary-color: #061431;
+  --white-color: #fff;
+  --black-color: #000;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'SF Pro Display';
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/*  */
+
+/* global */
+.overlay {
+  color: white;
+  background-image: linear-gradient( to bottom, #F2822B, #F15B40);
+}
+
+.arrow {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100rem;
+
+  background-color: var(--primary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  cursor: pointer;
+
+  position: absolute;
+}
+/* /global */
+
+/* header */
+/* nav_top */
+.nav__top {
+  background-color: var(--secondary-color);
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+.nav__top .container {
+  display: flex;
+  align-items: center;
+}
+.nav__contacts {
+  display: inline-flex;
+}
+.nav__contacts li  span{
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.nav__contacts li {
+  padding-right: 1.6rem;
+  padding-left: 1.6rem;
+
+  border-right: 0.5px solid rgb(167, 164, 164);
+}
+.nav__contacts li:last-child {
+  border-right: none;
+}
+
+.nav__contacts li span:first-child {
+  color: var(--primary-color);
+}
+.nav__contacts li span:last-child {
+  color: white;
+}
+.nav__home {
+  margin-left: auto;
+  display: inline-flex;
+  text-transform: uppercase;
+
+  color: white;
+}
+.nav__home span {
+  margin-left: 1rem;
+}
+/* nav_content */
+.nav__content {
+  position: relative;
+}
+.nav__content:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 0.5rem;
+
+  background-color: var(--primary-color);
+}
+.nav__content .container {
+  display: flex;
+  align-items: center;
+}
+.nav__brand {
+  padding-right: 2rem;
+}
+.nav__category {
+  display: inline-flex;
+  align-items: center;
+
+  padding-left: 2rem;
+  border-left: 1px solid #ccc;
+}
+.nav__category div {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100rem;
+
+  background-color: var(--primary-color);
+
+  position: relative;
+}
+.nav__category i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  color: white;
+}
+.nav__category span{
+  text-transform: uppercase;
+  margin-left: 0.8rem;
+  font-weight: 600;
+}
+.nav__menu {
+  display: inline-flex;
+  margin-left: auto;
+}
+.nav__menu li {
+  padding: 3rem 2rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 10%;
+}
+.nav__menu li:hover,
+.nav__menu li.active {
+  color: white;
+  background-color: var(--primary-color);
+  font-weight: 600;
+}
+/* hero */
+.hero {
+  position: relative;
+}
+.hero .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.hero .arrow:hover {
+  background-color: var(--primary-color);
+}
+.arrow-left {
+  left: 4rem;
+}
+.arrow-right {
+  right: 4rem;
+}
+.banner__list {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.banner__content {
+  padding: 0 2rem;
+}
+.banner__name {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  color:rgba(255, 255, 255, 0.4);
+
+  padding-bottom: 2rem;
+  border-bottom: 5px solid transparent;
+}
+.banner__name:hover span:last-child,
+.banner__name.active span:last-child {
+  color: white;
+}
+
+.banner__name:hover,
+.banner__name.active {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* /header */

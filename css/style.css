@@ -810,6 +810,9 @@ body {
  transform: translateY(-50%);
  right: 0;
 }
+.toggle__menu {
+  display: none;
+}
 @media screen and (max-width: 1023px) {
   html {
     font-size: 45%;
@@ -850,8 +853,30 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .toggle__menu {
+    display: block;
+    margin-left: auto;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 999;
+  }
   .nav__menu {
-    display: none;
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 10;
+    transform: translateX(-100%);
+  }
+  .nav__menu.show {
+    transform: translateX(0);
+  }
+  .nav__menu li {
+    color: var(--primary-color);
   }
   .about__inner {
     display: unset;

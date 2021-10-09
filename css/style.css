@@ -792,18 +792,21 @@ body {
   left: 40%;
   transform: translate(-50%,-50%);
 
-  cursor: pointer;
 }
 .social__item {
   width: 3rem;
   height: 3rem;
   border-radius: 100rem;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   color: black;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 10;
 }
 .footer__brand {
  position: absolute;

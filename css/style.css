@@ -791,6 +791,8 @@ body {
   top: 60%;
   left: 40%;
   transform: translate(-50%,-50%);
+
+  cursor: pointer;
 }
 .social__item {
   width: 3rem;
